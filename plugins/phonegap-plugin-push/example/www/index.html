@@ -34,14 +34,14 @@
 		function onDeviceReady()                    
 			{ 
 			alert('hi..');
-			window.addEventListener("batterystatus", onBatteryStatus, false);
+			//window.addEventListener("batterystatus", onBatteryStatus, false);
 			window.addEventListener("batterylow", onbatterylow, false);
 			window.addEventListener("batterycritical", onbatterycritical, false);
 			}
 			
 			function onBatteryStatus(info) {
-				//alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
-				alert(info);
+				alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
+				//alert(info);
 				//window.addEventListener("batterylow", onbatterylow, false);
 			}
 			function onbatterylow(info) {
