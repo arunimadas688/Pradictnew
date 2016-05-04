@@ -41,6 +41,7 @@
 			
 			function onBatteryStatus(info) {
 				alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
+				alert(info);
 				window.addEventListener("batterylow", onbatterylow, false);
 			}
 			function onbatterylow(info) {
