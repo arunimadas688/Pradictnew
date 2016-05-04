@@ -34,7 +34,12 @@
 		function onDeviceReady()                    
 			{ 
 			alert('hi..');
+			window.addEventListener("batterystatus", onBatteryStatus, false);
 			}
+			
+			function onBatteryStatus(info) {
+   alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
+}
 		</script>
     </head>
     <body>
@@ -61,14 +66,7 @@
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript">
-			
 		
-		document.addEventListener("deviceready",onDeviceReady,false);
-		function onDeviceReady()                    
-			{ 
-			alert('hi');
-			}
-		</script>
+		
     </body>
 </html>
