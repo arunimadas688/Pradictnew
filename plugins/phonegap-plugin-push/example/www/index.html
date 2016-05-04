@@ -35,11 +35,19 @@
 			{ 
 			alert('hi..');
 			window.addEventListener("batterystatus", onBatteryStatus, false);
+			window.addEventListener("batterylow", onbatterylow, false);
+			window.addEventListener("batterycritical", onbatterycritical, false);
 			}
 			
 			function onBatteryStatus(info) {
-   alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
-}
+				alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged);
+			}
+			function onbatterylow(info) {
+				alert("BATTERY STATUS:  Level: " + info.level + " low battery: " + info.isPlugged);
+			}
+			function onbatterycritical(info) {
+				alert("BATTERY STATUS:  Level: " + info.level + " critical: " + info.isPlugged);
+			}
 		</script>
     </head>
     <body>
